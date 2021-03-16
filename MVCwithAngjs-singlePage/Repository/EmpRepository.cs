@@ -54,8 +54,6 @@ namespace MVCwithAngjs_singlePage.Repository
 
         //}
 
-        //To view employee details with generic list 
         
-
     }
 }
