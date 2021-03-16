@@ -1,0 +1,45 @@
+﻿<div ng-controller="Bangladesh1Controller">
+    <style>
+        table, th, td {
+            border: 1px solid blue;
+            
+        }
+        tr {
+            cursor: pointer;
+        }
+    </style>
+    <div class="row" style="text-align:center">
+        <input type="text" name="txtname" ng-model="obj.Name" placeholder="name" />
+        <input type="number" name="txtage" ng-model="obj.Age" placeholder="Age" />
+        <button ng-click="save()"><Strong>{{btn}}</Strong></button>
+    </div>
+    <br />
+    <div class="row" style="text-align:center">
+        <div class="col-md-9">
+            <h3>Employee Info</h3>
+        </div>
+    </div>
+    <div class="row" style="text-align:center">
+        <div class="col-md-9">
+            <table align="center">
+                <thead>
+                    <tr>
+                        <th>SL No</th>
+                        <th>Emp Name</th>
+                        <th>Age</th>
+                        <th>Action</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="aEmp in EmployeeList" ng-click="update(aEmp);">
+                        <td>{{$index + 1}}</td>
+                        <td>{{aEmp.Name}}</td>
+                        <td>{{aEmp.Age}}</td>
+                        <td ng-click="Remove(aEmp.Id)"><button>Remove</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
